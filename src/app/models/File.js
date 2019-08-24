@@ -1,5 +1,4 @@
 import Sequelize, { Model } from 'sequelize';
-import { get } from 'http';
 
 class File extends Model {
   static init(sequelize) {
