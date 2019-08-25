@@ -101,9 +101,8 @@ class AppointmentController {
 
   async delete(req, res) {
     const appointment = await Appointment.findByPk(req.params.id);
-    console.log(appointment);
-    console.log(appointment.user, req.userId);
-    if (appointment.user !== req.userId) {
+    console.log(appointment.user_id, req.userId);
+    if (appointment.user_id !== req.userId) {
       return res.status(401).json({
         error: "You don't have permission",
       });
